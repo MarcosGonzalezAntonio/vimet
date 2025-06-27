@@ -21,6 +21,7 @@ header {
     letter-spacing: 1px;
 }
 
+
 .logo {
     width: 4rem;
 }
@@ -65,11 +66,11 @@ nav ul li a {
 
 .contenedor .img1 {
     background-image: url(./images/hoodies.png);
-    transition: .4s ease-in-out;
+    transition: .6s ease-in-out;
 }
 
 .contenedor .img1:hover {
-    background-image: url(./images/pantalones.png);
+    background-image: url(./images/camisa.jpg);
 }
 
 .contenedor .img2 {
@@ -83,11 +84,21 @@ nav ul li a {
 .contenedor .img4 {
     background-image: url(./images/accesorios.png);
 }
-
+.contenedor .img5 {
+    background-image: url(./images/campera.jpg);
+}
+.contenedor .img6 {
+    background-image: url(./images/camisa.jpg);
+}
+.contenedor .img7 {
+    background-image: url(./images/medias.jpg);
+}
+.contenedor .img8 {
+    background-image: url(./images/hoodiescanino.png);
+}
 /* .contenedor .img5 {
     background-image: url(./images/medias.png);
 } */
-
 
 .boton {
     text-decoration: none;
@@ -135,10 +146,6 @@ h3{
     align-items: center;
 }
 
-
-
-
-
 /* FOOTER */
 
 footer {
@@ -180,8 +187,6 @@ footer .flex {
     gap: .6rem;
 }
 
-
-
 /* RESPONSIVE */
 
 @media (max-width: 1300px) {
@@ -197,7 +202,9 @@ footer .flex {
     .contenedor {
         grid-template-columns: repeat(2, 1fr);
     }
-
+    .producto{
+        grid-template-columns: repeat(2, 1fr);
+    }
 
 }
 
@@ -214,6 +221,9 @@ footer .flex {
     footer {
         padding: 1rem;
         justify-content: space-between;
+    }
+    .producto{
+        grid-template-columns: repeat(1,1fr);
     }
 
 
