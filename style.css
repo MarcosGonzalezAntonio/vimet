@@ -12,10 +12,13 @@
 }
 
 header {
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: 1.2rem 2rem;
     background-color: #eeeeee;
     font-family: var(--fuente-primaria);
     letter-spacing: 1px;
@@ -41,6 +44,11 @@ nav ul li a {
     font-size: 1.4rem;
 }
 
+nav ul li a:hover {
+    transition: .4s ease-in-out;
+    color: #4d4d4d;
+}
+
 /* Seccion Categorias Main */
 
 .categorias {
@@ -51,6 +59,7 @@ nav ul li a {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: .4rem;
+   
 }
 
 .contenedor div {
@@ -66,36 +75,76 @@ nav ul li a {
 
 .contenedor .img1 {
     background-image: url(./images/hoodies.png);
+}
+.contenedor .img1:hover{
+    background-image: url(./images/hoodieslogo.jpg);
     transition: .6s ease-in-out;
+    background-position: -46px;
 }
-
-.contenedor .img1:hover {
-    background-image: url(./images/camisa.jpg);
-}
-
 .contenedor .img2 {
     background-image: url(./images/remeras.png);
+}
+.contenedor .img2:hover:hover{
+    background-image: url(./images/remeralogo.jpg);
+    transition: .6s ease-in-out;
+    background-position: -46px;
 }
 
 .contenedor .img3 {
     background-image: url(./images/pantalones.png);
 }
+.contenedor .img3:hover:hover{
+    background-image: url(./images/pantalonlogo.jpg);
+    transition: .6s ease-in-out;
+    background-position: -46px;
+}
 
 .contenedor .img4 {
     background-image: url(./images/accesorios.png);
 }
+.contenedor .img4:hover:hover{
+    background-image: url(./images/accesoriologo.jpg);
+    transition: .6s ease-in-out;
+    background-position: -46px;
+}
+
 .contenedor .img5 {
     background-image: url(./images/campera.jpg);
+     background-position: -46px;
 }
+.contenedor .img5:hover{
+    background-image: url(./images/camperalogo.jpg);
+    transition: .6s ease-in-out;
+    background-position: -46px;
+}
+
 .contenedor .img6 {
     background-image: url(./images/camisa.jpg);
+     background-position: -40px;
 }
+.contenedor .img6:hover{
+    background-image: url(./images/camisalogo.jpg);
+    transition: .6s ease-in-out;
+    background-position: -46px;
+}
+
 .contenedor .img7 {
     background-image: url(./images/medias.jpg);
+}
+.contenedor .img7:hover{
+    background-image: url(./images/mediaslogo.jpg);
+    transition: .6s ease-in-out;
+    background-position: -46px;
 }
 .contenedor .img8 {
     background-image: url(./images/hoodiescanino.png);
 }
+.contenedor .img8:hover{
+    background-image: url(./images/hoodiescaninologo.png);
+    transition: .6s ease-in-out;
+    background-position: -46px;
+}
+
 /* .contenedor .img5 {
     background-image: url(./images/medias.png);
 } */
@@ -123,27 +172,80 @@ nav ul li a {
     padding: 2rem;
     font-family: var(--fuente-primaria);
 }
-.imagen{
+
+.imagen {
     width: 18rem;
-  height: 24rem;
+    height: 24rem;
 }
-.producto{
- display: grid;
+
+.producto {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
-place-items: center;
+    place-items: center;
 }
-h3{
+
+h3 {
     letter-spacing: 2.5px;
-    
+
 }
-.card-boton{
+
+.card-boton {
     text-decoration: none;
 }
-.card{
+a{
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    
+}
+
+.card {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.card h3{
+    font-size: 18.72px;
+}
+
+.card p{
+    font-size: 16px;
+}
+
+.redes {
+    padding: 2rem;
+    /* background-color: black; */
+
+    .contenedor-redes {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        place-items: center;
+        gap: 2rem;
+
+        .box-redes {
+            background-image: url("./images/logo.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-color: rgba(0, 0, 0, 0.911); */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 16rem;
+            border: 1px solid rgba(0, 0, 0, 0.705);
+            border-radius: .4rem;
+
+            i {
+                color: rgb(0, 0, 0);
+                font-size: 3rem;
+            }
+        }
+
+    }
 }
 
 /* FOOTER */
@@ -202,7 +304,8 @@ footer .flex {
     .contenedor {
         grid-template-columns: repeat(2, 1fr);
     }
-    .producto{
+
+    .producto {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -222,8 +325,19 @@ footer .flex {
         padding: 1rem;
         justify-content: space-between;
     }
-    .producto{
-        grid-template-columns: repeat(1,1fr);
+
+    .producto {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .redes {
+
+        padding: 1rem;
+
+        .contenedor-redes {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
     }
 
 
